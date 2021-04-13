@@ -130,6 +130,22 @@ body {
   line-height: 28px;
   font-weight: 200;
   margin-left: 16px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.header__link:hover {
+  color: #00F3BB;
+  text-decoration: line-through;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.header__link:active {
+  color: #060A24;
+  text-decoration: line-through;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 /*Hamburger Button media query*/
