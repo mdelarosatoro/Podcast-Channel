@@ -288,6 +288,10 @@ body {
   border-radius: 10px;
 }
 
+.main__episodios__iframe {
+  border: 0;
+}
+
 .main__feature-photo {
   height: 519px;
   position: relative;
