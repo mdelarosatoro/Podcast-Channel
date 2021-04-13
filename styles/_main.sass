@@ -1,0 +1,432 @@
+@import "./_variables"
+@import "./_mixins"
+
+.main
+
+    &__hero
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        padding-bottom: 24px
+
+        &__heading
+            font-family: $primary-heading-font
+            font-size: $primary-heading-size
+            font-weight: $primary-heading-weight
+            margin-left: 16px
+            margin-top: 22px
+            color: $main-font-color
+            line-height: 42px
+
+        .title-b
+            display: none
+        
+        &__striked-text
+            text-decoration: line-through
+
+        &__blue-dot
+            color: #0000EC
+
+        &__description
+            font-family: $main-description-font
+            font-size: $main-description-size
+            font-weight: $main-description-weight
+            color: $main-font-color
+            letter-spacing: 0
+            line-height: 22px
+            display: block
+            width: 90vw
+            margin-left: 16px
+            margin-top: 16px
+            margin-bottom: 26px
+
+        &__link
+            @include buttons
+            margin: auto
+
+        &__link:hover
+            @include buttons-hover
+            
+
+    &__episodios
+        background-image: $primary-gradient
+        width: 100vw
+        max-width: 100%
+        height: 1203.5px
+        padding-top: 64px
+        clip-path: polygon(0% 4%, 100% 0%, 100% 96%, 0% 100%)
+
+        &__heading
+            color: #FFFFFF
+            font-family: $primary-heading-font
+            font-weight: 300
+            font-size: 36px
+            display: block
+            margin: 0px 147px 21px 16px
+
+        &__div
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+        
+        &__container
+            width: 298px
+            height: 225px
+            margin-bottom: 13px
+            overflow: hidden
+            border-radius: 10px
+
+    &__feature-photo
+        height: 519px
+        position: relative
+        top: -98px
+
+        &__img
+            height: 100%
+            margin-bottom: 27px
+
+        &__heading
+            @include primary-headings
+
+        &__text
+            padding-left: 16px
+            padding-right: 16px
+            font-family: $main-description-font
+            font-size: 14px
+            line-height: 22px
+
+        .title-show-desktop
+            display: none
+
+    &__invitados-estelares
+        margin-top: 314px
+
+        &__heading
+            @include primary-headings
+            margin-bottom: 14px
+
+        &__container
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+            flex-wrap: wrap
+
+        &__imgcontainer
+            width: 320px
+            height: 243px
+            max-width: 480px
+            max-height: 364px
+
+        &__img
+            width: 100%
+            height: 100%
+
+    &__temas
+
+        &__heading
+            @include primary-headings
+            margin-top: 48px
+            margin-bottom: 37px
+
+        &__container
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+
+        &__tema-container
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+
+        .m1
+            margin-bottom: 49px
+        
+        .m2, .m3
+            margin-bottom: 65px
+
+
+        &__img
+            margin-bottom: 13px
+            width: 104px
+            height: 104px
+
+        &__tema-heading
+            font-family: $tema-font
+            font-size: $tema-size
+            font-weight: $tema-weight
+            text-align: center
+            line-height: 32px
+
+    &__novedades
+        height: 341px
+        width: 100%
+        background-image: $primary-gradient
+        clip-path: polygon(0% 6%, 100% 0%, 100% 100%, 0% 100%)
+        margin-top: 40px
+
+
+        &__container
+            height: 100%
+            width: 100%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            row-gap: 34px
+
+        &__heading
+            font-family: $primary-heading-font
+            color: white
+            font-weight: 300
+            font-size: $primary-heading-size
+            text-align: center
+            display: block
+            width: 288px
+            height: 126px
+            line-height: 42px
+
+        &__button
+            @include buttons
+
+        &__button:hover
+            @include buttons-hover
+            
+
+@media screen and (min-width: 750px) and (max-width: 1268px)
+    .main
+
+        &__hero
+            padding: 30px
+            height: 350px
+
+            &__heading
+                font-size: 50px
+                line-height: 52px
+
+            .title-b
+                display: block
+            
+            .title-a
+                display: none
+
+            &__description
+                font-size: 16px
+
+        &__invitados-estelares
+
+            &__heading
+                margin-left: 30px
+
+        &__temas
+
+            &__heading
+                margin-left: 30px
+
+            &__container
+                display: grid
+                grid-template-columns: 1fr 1fr
+                grid-template-rows: 1fr 1fr
+                row-gap: 60px
+
+            .m1, .m2, .m3
+                margin: 0
+
+        &__novedades
+            height: 450px
+
+            &__container
+                row-gap: 30px
+
+            &__heading
+                width: 400px
+                font-size: 42px
+
+
+@media screen and (min-width: 472px) and (max-width: 1268px)
+    .main
+
+        &__episodios
+            height: 1300px
+
+            &__heading
+                margin-left: 60px
+                margin-top: 20px
+                font-size: 40px
+
+
+            &__container
+                width: 80vw
+                max-width: 650px
+            
+            &__iframe
+                width: 100%
+
+@media screen and (min-width: 784px) and (max-width: 1268px)
+    .main
+
+        &__feature-photo
+            display: flex
+
+            &__container
+                padding-top: 120px
+        
+        &__invitados-estelares
+            margin-top: 0
+
+/*MEDIA QUERIES HERO*/
+@media screen and (min-width: 1268px)
+    .main
+
+        &__hero
+            height: 369px
+            padding-left: 200px
+            padding-top: 120px
+
+            .title-a
+                display: none
+            
+            .title-b
+                display: block
+                margin: 0
+                font-size: 64px
+                padding-top: 21px
+                padding-bottom: 21px
+
+            &__description
+                 width: 628px
+                 font-size: 16px
+                 font-weight: 400
+                 line-height: 24px
+                 letter-spacing: 0
+                 margin: 0
+                 margin-bottom: 56px
+
+
+            &__link
+                margin: 0
+                margin-bottom: 5px
+
+        &__episodios
+            clip-path: polygon(0% 12%, 100% 0%, 100% 88%, 0% 100%)
+            padding-top: 186px
+            height: 1042.6px
+
+            &__heading
+                padding-left: 200px
+                font-size: 48px
+                margin-bottom: 26px
+
+            &__div
+                flex-direction: row
+                flex-wrap: wrap
+                column-gap: 72px
+                row-gap: 70px
+
+            &__container
+                width: 584px
+                height: 232px
+
+            &__iframe
+                width: 100%
+
+        &__feature-photo
+            display: flex
+            padding-left: 200px
+            top: -159px
+            column-gap: 62.4px
+
+            &__img
+                height: 660px
+                width: 457.6px
+
+            &__container
+                padding-top: 168px
+
+            &__heading
+                padding: 0
+                font-size: 48px
+
+            &__text
+                padding: 0
+                font-size: 16px
+                margin-top: 24px
+                width: 464px
+
+            .title-hide-desktop
+                display: none
+
+            .title-show-desktop
+                display: block
+
+        &__invitados-estelares
+            margin: 0
+            margin-top: 64px
+            margin-bottom: 36px
+
+            &__heading
+                font-size: 48px
+                margin-left: 200px
+                margin-bottom: 36px
+
+            &__imgcontainer
+                width: 480px
+                height: 364px
+
+        &__temas
+            padding-left: 200px
+            padding-right: 200px
+            margin-bottom: 34px
+
+            &__heading
+                font-size: 48px
+                margin-bottom: 69px
+
+            &__container
+                flex-direction: row
+                column-gap: 40px
+
+            &__tema-container
+                width: 220px
+                row-gap: 29px
+
+            .m1
+                margin-bottom: 0
+
+            .m2, .m3
+                margin-bottom: 0
+
+            &__tema-heading
+                display: block
+                width: 100%
+                height: 64px
+
+        &__novedades
+            height: 518px
+            clip-path: polygon(0% 25%, 100% 0%, 100% 100%, 0% 100%)
+            padding: 213px 374px 151px 374px
+
+
+            &__container
+                row-gap: 36px
+
+            &__heading
+                font-size: 48px
+                width: 692px
+                height: 62px
+
+
+@media screen and (min-width: 1280px) and (max-width: 1439px)
+    .main
+
+        &__invitados-estelares
+
+            &__imgcontainer
+                width: 480*0.8px
+                height: 364*0.8px
+
+
+

@@ -1,0 +1,112 @@
+@import "./_variables"
+
+.header
+    width: 100vw
+    height: 44px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    max-width: 100%
+
+    &__logo
+        margin-left: 16px
+
+    #hamburger-button-checkbox
+        display: none
+
+    .top-bar
+        transform-origin: 0% 0%
+
+    .bottom-bar
+        transform-origin: 0% 100%
+
+    input:checked ~ label > .header__hamburger-button > .top-bar
+        transform: rotate(45deg) translate(-2px, -1px)
+
+    input:checked ~ label > .header__hamburger-button > .middle-bar
+        opacity: 0
+
+    input:checked ~ label > .header__hamburger-button > .bottom-bar
+        transform: rotate(-45deg) translate(0, -1px)
+
+    input:checked ~ .header__nav
+        left: 0
+        opacity: 1
+        transition: all 0.5s ease
+        display: block
+
+    &__hamburger-button
+        margin-right: 16px
+        height: 12px
+        width: 18px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+    &__hamburger-strip
+        height: 2px
+        width: 18px
+        background-color: black
+        transition: all 0.2s
+
+    &__nav
+        height: 224px
+        width: 100%
+        background-color: #0000EC
+        position: absolute
+        left: 100vw
+        top: 44px
+        transition: all 0.5s ease
+        opacity: 0
+        display: none
+
+    &__ul
+        display: flex
+        column-gap: 10px
+        flex-direction: column
+        row-gap: 24px
+        margin-top: 16px
+
+    &__link
+        font-family: $main-description-font
+        font-size: 16px
+        color: #FFFFFF
+        letter-spacing: 0
+        line-height: 28px
+        font-weight: 200
+        margin-left: 16px
+
+/*Hamburger Button media query*/
+
+@media screen and (min-width: 820px)
+    
+    .header
+        padding-left: 100px
+        padding-right: 100px
+
+        &__logo
+            margin-left: 0px
+            margin-top: 22px
+            height: 36px
+            width: 36px
+        
+        &__hamburger-button-label
+            display: none
+
+        &__nav
+            position: static
+            opacity: 1
+            background-color: white
+            height: 100%
+            display: block
+            width: auto
+
+        &__ul
+            flex-direction: row
+            column-gap: 48px
+
+        &__link
+            color: #060a24
+            font-size: 16px
+            font-weight: 300
+
