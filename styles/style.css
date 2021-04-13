@@ -536,6 +536,12 @@ body {
   }
 }
 
+@media screen and (min-width: 321px) and (max-width: 471px) {
+  .main__feature-photo__img {
+    padding-left: 30px;
+  }
+}
+
 @media screen and (min-width: 472px) and (max-width: 1268px) {
   .main__episodios {
     height: 1300px;
