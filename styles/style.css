@@ -30,6 +30,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   max-width: 100%;
+  position: fixed;
+  background-color: white;
+  z-index: 999;
 }
 
 .header__logo {
@@ -151,6 +154,10 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
+[id] {
+  scroll-margin-top: 64px;
+}
+
 /*Hamburger Button media query*/
 @media screen and (min-width: 820px) {
   .header {
@@ -204,6 +211,9 @@ body {
     font-weight: 300;
     line-height: 28px;
   }
+  [id] {
+    scroll-margin-top: 104px;
+  }
 }
 
 /*COLORS*/
@@ -227,7 +237,7 @@ body {
   font-size: 36px;
   font-weight: 400;
   margin-left: 16px;
-  margin-top: 22px;
+  margin-top: 73px;
   color: #060A24;
   line-height: 42px;
 }
@@ -256,6 +266,7 @@ body {
   margin-left: 16px;
   margin-top: 16px;
   margin-bottom: 26px;
+  text-align: justify;
 }
 
 .main__hero__link {
@@ -287,8 +298,8 @@ body {
   max-width: 100%;
   height: 1203.5px;
   padding-top: 64px;
-  -webkit-clip-path: polygon(0% 4%, 100% 0%, 100% 96%, 0% 100%);
-          clip-path: polygon(0% 4%, 100% 0%, 100% 96%, 0% 100%);
+  -webkit-clip-path: polygon(0% 3%, 100% 0%, 100% 97%, 0% 100%);
+          clip-path: polygon(0% 3%, 100% 0%, 100% 97%, 0% 100%);
 }
 
 .main__episodios__heading {
@@ -314,14 +325,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  row-gap: 13px;
 }
 
 .main__episodios__container {
   width: 298px;
   height: 225px;
-  margin-bottom: 13px;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .main__episodios__iframe {
@@ -331,7 +342,7 @@ body {
 .main__feature-photo {
   height: 519px;
   position: relative;
-  top: -98px;
+  top: -85px;
 }
 
 .main__feature-photo__img {
@@ -360,7 +371,7 @@ body {
 }
 
 .main__invitados-estelares {
-  margin-top: 314px;
+  margin-top: 368px;
 }
 
 .main__invitados-estelares__heading {
@@ -464,6 +475,8 @@ body {
   font-weight: 600;
   text-align: center;
   line-height: 32px;
+  display: block;
+  width: 288px;
 }
 
 .main__novedades {
@@ -669,6 +682,7 @@ body {
   .main__episodios__container {
     width: 584px;
     height: 232px;
+    margin-bottom: 0;
   }
   .main__episodios__iframe {
     width: 100%;

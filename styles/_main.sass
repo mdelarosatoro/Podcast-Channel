@@ -14,7 +14,7 @@
             font-size: $primary-heading-size
             font-weight: $primary-heading-weight
             margin-left: 16px
-            margin-top: 22px
+            margin-top: 44+29px
             color: $main-font-color
             line-height: 42px
 
@@ -39,6 +39,7 @@
             margin-left: 16px
             margin-top: 16px
             margin-bottom: 26px
+            text-align: justify
 
         &__link
             @include buttons
@@ -54,7 +55,7 @@
         max-width: 100%
         height: 1203.5px
         padding-top: 64px
-        clip-path: polygon(0% 4%, 100% 0%, 100% 96%, 0% 100%)
+        clip-path: polygon(0% 3%, 100% 0%, 100% 97%, 0% 100%)
 
         &__heading
             color: #FFFFFF
@@ -69,13 +70,13 @@
             flex-direction: column
             justify-content: center
             align-items: center
+            row-gap: 13px
         
         &__container
             width: 298px
             height: 225px
-            margin-bottom: 13px
             overflow: hidden
-            border-radius: 10px
+            border-radius: 8px
 
         &__iframe
             border: 0
@@ -83,7 +84,7 @@
     &__feature-photo
         height: 519px
         position: relative
-        top: -98px
+        top: -98+13px
 
         &__img
             height: 100%
@@ -103,7 +104,7 @@
             display: none
 
     &__invitados-estelares
-        margin-top: 314px
+        margin-top: 314+54px
 
         &__heading
             @include primary-headings
@@ -163,6 +164,8 @@
             font-weight: $tema-weight
             text-align: center
             line-height: 32px
+            display: block
+            width: 288px
 
     &__novedades
         height: 341px
@@ -340,6 +343,7 @@
             &__container
                 width: 584px
                 height: 232px
+                margin-bottom: 0
 
             &__iframe
                 width: 100%
