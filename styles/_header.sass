@@ -30,8 +30,7 @@
         transform: rotate(-45deg) translate(0, -1px)
 
     input:checked ~ .header__nav
-        left: 0
-        opacity: 1
+        transform: scale(1,1)
         transition: all 0.5s ease
         display: block
 
@@ -54,11 +53,13 @@
         width: 100%
         background-color: #0000EC
         position: absolute
-        left: 100vw
+        left: 0
         top: 44px
+        transform: scale(1,0)
         transition: all 0.5s ease
-        opacity: 0
-        display: none
+        transform-origin: top
+        // opacity: 0
+        // display: none
 
     &__ul
         display: flex
@@ -94,10 +95,11 @@
     .header
         padding-left: 100px
         padding-right: 100px
+        height: 80px
 
         &__logo
             margin-left: 0px
-            margin-top: 22px
+            margin-top: 0px
             height: 36px
             width: 36px
         
@@ -111,13 +113,18 @@
             height: 100%
             display: block
             width: auto
+            transform: scale(1,1)
+
 
         &__ul
             flex-direction: row
             column-gap: 48px
+            justify-content: center
+            align-items: center
 
         &__link
             color: #060a24
             font-size: 16px
             font-weight: 300
+            line-height: 28px
 
