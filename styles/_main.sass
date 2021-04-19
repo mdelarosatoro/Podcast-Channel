@@ -8,6 +8,8 @@
         flex-direction: column
         justify-content: flex-start
         padding-bottom: 24px
+        max-width: 1440px
+        margin: 0 auto
 
         &__heading
             font-family: $primary-heading-font
@@ -38,8 +40,14 @@
             width: 90vw
             margin-left: 16px
             margin-top: 16px
-            margin-bottom: 26px
+            margin-bottom: 36px
             text-align: justify
+
+        .hero-description-mobile
+            display: block
+
+        .hero-description-desktop
+            display: none
 
         &__link
             @include buttons
@@ -56,6 +64,8 @@
         height: 1203.5px
         padding-top: 64px
         clip-path: polygon(0% 3%, 100% 0%, 100% 97%, 0% 100%)
+        max-width: 1440px
+        margin: 0 auto
 
         &__heading
             color: #FFFFFF
@@ -70,13 +80,14 @@
             flex-direction: column
             justify-content: center
             align-items: center
-            row-gap: 13px
+            // row-gap: 13px
         
         &__container
             width: 298px
             height: 225px
             overflow: hidden
             border-radius: 8px
+            margin-bottom: 13px
 
         &__iframe
             border: 0
@@ -85,6 +96,8 @@
         height: 519px
         position: relative
         top: -98+13px
+        max-width: 1440px
+        margin: 0 auto
 
         &__img
             height: 100%
@@ -104,7 +117,8 @@
             display: none
 
     &__invitados-estelares
-        margin-top: 314+54px
+        margin: 314+54px auto 0 auto
+        max-width: 1440px
 
         &__heading
             @include primary-headings
@@ -128,6 +142,9 @@
             height: 100%
 
     &__temas
+        max-width: 1440px
+        margin: 0 auto
+        margin-bottom: 42px
 
         &__heading
             @include primary-headings
@@ -173,7 +190,8 @@
         background-image: $primary-gradient
         clip-path: polygon(0% 6%, 100% 0%, 100% 100%, 0% 100%)
         margin-top: 40px
-
+        max-width: 1440px
+        margin: 0 auto
 
         &__container
             height: 100%
@@ -182,7 +200,7 @@
             flex-direction: column
             justify-content: center
             align-items: center
-            row-gap: 34px
+            // row-gap: 34px
 
         &__heading
             font-family: $primary-heading-font
@@ -194,6 +212,7 @@
             width: 288px
             height: 126px
             line-height: 42px
+            margin-bottom: 34px
 
         &__button
             @include buttons
@@ -245,7 +264,7 @@
             height: 450px
 
             &__container
-                row-gap: 30px
+                // row-gap: 30px
 
             &__heading
                 width: 400px
@@ -271,10 +290,10 @@
                 margin-top: 20px
                 font-size: 40px
 
-
             &__container
                 width: 80vw
                 max-width: 650px
+                border-radius: 8px
             
             &__iframe
                 width: 100%
@@ -296,9 +315,9 @@
     .main
 
         &__hero
-            height: 369px
+            height: 369+80px
             padding-left: 200px
-            padding-top: 120px
+            padding-top: 200px
 
             .title-a
                 display: none
@@ -319,10 +338,11 @@
                  margin: 0
                  margin-bottom: 56px
 
-
             &__link
                 margin: 0
-                margin-bottom: 5px
+                width: 225px
+                height: 56px
+                padding: 16px 0
 
         &__episodios
             clip-path: polygon(0% 12%, 100% 0%, 100% 88%, 0% 100%)
@@ -337,26 +357,32 @@
             &__div
                 flex-direction: row
                 flex-wrap: wrap
-                column-gap: 72px
-                row-gap: 70px
+                // column-gap: 72px
+                // row-gap: 70px
 
             &__container
                 width: 584px
                 height: 232px
-                margin-bottom: 0
+                margin-bottom: 70px
 
             &__iframe
                 width: 100%
 
+            .e1, .e3
+                margin-right: 72px
+
         &__feature-photo
             display: flex
             padding-left: 200px
-            top: -159px
-            column-gap: 62.4px
+            top: -159-13px
+            margin-bottom: -25px
+            // column-gap: 62.4px
 
             &__img
                 height: 660px
                 width: 457.6px
+                margin-right: 62.4px
+                margin-bottom: 0px
 
             &__container
                 padding-top: 168px
@@ -364,12 +390,14 @@
             &__heading
                 padding: 0
                 font-size: 48px
+                margin-top: 25px
 
             &__text
                 padding: 0
                 font-size: 16px
                 margin-top: 24px
                 width: 464px
+                line-height: 24px
 
             .title-hide-desktop
                 display: none
@@ -378,7 +406,7 @@
                 display: block
 
         &__invitados-estelares
-            margin: 0
+            // margin: 0
             margin-top: 64px
             margin-bottom: 36px
 
@@ -402,7 +430,7 @@
 
             &__container
                 flex-direction: row
-                column-gap: 40px
+                // column-gap: 40px
 
             &__tema-container
                 width: 220px
@@ -414,6 +442,9 @@
             .m2, .m3
                 margin-bottom: 0
 
+            .m1, .m2, .m3
+                margin-right: 40px
+
             &__tema-heading
                 display: block
                 width: 100%
@@ -424,14 +455,11 @@
             clip-path: polygon(0% 25%, 100% 0%, 100% 100%, 0% 100%)
             padding: 213px 374px 151px 374px
 
-
-            &__container
-                row-gap: 36px
-
             &__heading
                 font-size: 48px
                 width: 692px
                 height: 62px
+                margin-bottom: 36px
 
 
 @media screen and (min-width: 1280px) and (max-width: 1439px)
@@ -443,5 +471,15 @@
                 width: 480*0.8px
                 height: 364*0.8px
 
+@media screen and (min-width: 800px)
+    .main
+
+        &__hero
+
+            .hero-description-mobile
+                display: none
+
+            .hero-description-desktop
+                display: block
 
 
