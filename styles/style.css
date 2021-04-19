@@ -817,6 +817,18 @@
   }
 }
 
+@media screen and (min-width: 363px) and (max-width: 487px) {
+  .main__feature-photo {
+    margin-bottom: -50px;
+  }
+}
+
+@media screen and (min-width: 488px) and (max-width: 783px) {
+  .main__feature-photo {
+    margin-bottom: -120px;
+  }
+}
+
 /*COLORS*/
 /*FONT SIZES*/
 .footer {
